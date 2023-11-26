@@ -32,6 +32,9 @@
 		10721C002B13A0B6008B702B /* CommentPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10721BFF2B13A0B6008B702B /* CommentPageViewModel.swift */; };
 		10721C022B13A3C3008B702B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10721C012B13A3C3008B702B /* Comment.swift */; };
 		10721C042B13B0AC008B702B /* PhotoPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10721C032B13B0AC008B702B /* PhotoPageTableViewCell.swift */; };
+		10721C062B13C512008B702B /* SinglePhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10721C052B13C512008B702B /* SinglePhotoPageViewController.swift */; };
+		10721C082B13C755008B702B /* SingleUserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10721C072B13C755008B702B /* SingleUserPageViewController.swift */; };
+		10721C0A2B13CF41008B702B /* UserPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10721C092B13CF41008B702B /* UserPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		10721BFF2B13A0B6008B702B /* CommentPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPageViewModel.swift; sourceTree = "<group>"; };
 		10721C012B13A3C3008B702B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		10721C032B13B0AC008B702B /* PhotoPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageTableViewCell.swift; sourceTree = "<group>"; };
+		10721C052B13C512008B702B /* SinglePhotoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePhotoPageViewController.swift; sourceTree = "<group>"; };
+		10721C072B13C755008B702B /* SingleUserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserPageViewController.swift; sourceTree = "<group>"; };
+		10721C092B13CF41008B702B /* UserPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +147,9 @@
 				10721BFB2B136E61008B702B /* CommentPageViewController.swift */,
 				10721BE62B135D4E008B702B /* AlbumsPageViewController.swift */,
 				10721BE82B135DA2008B702B /* PhotosPageViewController.swift */,
+				10721C052B13C512008B702B /* SinglePhotoPageViewController.swift */,
 				10721BEA2B135DE3008B702B /* UserPageViewController.swift */,
+				10721C072B13C755008B702B /* SingleUserPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 				10721BF92B136C73008B702B /* PostPageTableCell.swift */,
 				10721BFD2B139F3C008B702B /* CommentPageTableCell.swift */,
 				10721C032B13B0AC008B702B /* PhotoPageTableViewCell.swift */,
+				10721C092B13CF41008B702B /* UserPageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,13 +246,16 @@
 				10721BEB2B135DE3008B702B /* UserPageViewController.swift in Sources */,
 				10721BFA2B136C73008B702B /* PostPageTableCell.swift in Sources */,
 				10721BF72B1366E5008B702B /* User.swift in Sources */,
+				10721C082B13C755008B702B /* SingleUserPageViewController.swift in Sources */,
 				10721BE92B135DA2008B702B /* PhotosPageViewController.swift in Sources */,
 				10721C022B13A3C3008B702B /* Comment.swift in Sources */,
+				10721C0A2B13CF41008B702B /* UserPageTableViewCell.swift in Sources */,
 				10721BF32B1365C2008B702B /* Album.swift in Sources */,
 				10721BED2B136506008B702B /* AlbumsPageViewModel.swift in Sources */,
 				1030E5D72B11D95E000BD557 /* PostPageViewModel.swift in Sources */,
 				1030E5D32B11D537000BD557 /* PostPageViewController.swift in Sources */,
 				10721BF52B1366DA008B702B /* Photo.swift in Sources */,
+				10721C062B13C512008B702B /* SinglePhotoPageViewController.swift in Sources */,
 				1030E5D52B11D59D000BD557 /* NetworkManager.swift in Sources */,
 				1030E5BC2B11C8EC000BD557 /* AppDelegate.swift in Sources */,
 				1030E5D92B11DABA000BD557 /* Post.swift in Sources */,

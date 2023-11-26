@@ -33,5 +33,9 @@ extension PhotosPageViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cv = storyboard?.instantiateViewController(identifier: "SinglePhotoPageViewController") as! SinglePhotoPageViewController
+        cv.configure(thumbnailUrl: viewModel.photoItems?[indexPath.row].thumbnailUrl ?? "")
+        navigationController?.show(cv, sender: nil)
+    }
 }
