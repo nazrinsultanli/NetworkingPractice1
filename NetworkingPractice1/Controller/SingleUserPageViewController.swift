@@ -14,16 +14,19 @@ class SingleUserPageViewController: UIViewController {
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userName: UILabel!
+    
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    func setSingleUser(with user: User){
-        print("Street: \(String(describing: user.address?.street))")
-        print("Company Name: \(String(describing: user.company?.name))")
-        print("Phone: \(String(describing: user.phone))")
-        print("Email: \(String(describing: user.email))")
-        print("Name: \(String(describing: user.name))")
         
+        if let user {
+            setSingleUser(with: user)
+        }
+    }
+    
+    
+    func setSingleUser(with user: User) {
         // Set the values to labels
         adress.text = String(describing: user.address?.street)
         companyName.text = String(describing: user.company?.name)
@@ -31,7 +34,5 @@ class SingleUserPageViewController: UIViewController {
         emailLabel.text = String(describing: user.email)
         userName.text = String(describing: user.name)
     }
-
-
 
 }

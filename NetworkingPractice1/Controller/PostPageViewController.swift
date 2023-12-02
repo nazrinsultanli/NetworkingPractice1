@@ -10,8 +10,10 @@ import UIKit
 class PostPageViewController: UIViewController {
     @IBOutlet weak var tableViewm: UITableView!
     var viewModel = PostPageViewModel(netWorkManager: NetworkManager.shared)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.getPost {
             DispatchQueue.main.async {
                 self.tableViewm.reloadData()
@@ -32,12 +34,10 @@ extension PostPageViewController: UITableViewDataSource, UITableViewDelegate {
         cell.bodyLabel.text = viewModel.postItems?[indexPath.row].body
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cv = storyboard?.instantiateViewController(withIdentifier: "CommentPageViewController") as! CommentPageViewController
         cv.viewModel.postId = viewModel.postItems?[indexPath.row].id ?? 0
         navigationController?.show(cv, sender: nil)
     }
-    
-    
-    
 }

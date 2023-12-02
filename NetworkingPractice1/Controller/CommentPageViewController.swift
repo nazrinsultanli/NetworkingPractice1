@@ -10,8 +10,10 @@ import UIKit
 class CommentPageViewController: UIViewController {
     @IBOutlet weak var tableViewm: UITableView!
     var viewModel = CommentPageViewModel(netWorkManager: NetworkManager.shared)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.getComment {
             DispatchQueue.main.async {
                 self.tableViewm.reloadData()

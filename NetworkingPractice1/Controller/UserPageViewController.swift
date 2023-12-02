@@ -34,16 +34,14 @@ extension UserPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let cv = storyboard?.instantiateViewController(withIdentifier: "SingleUserPageViewController") as! SingleUserPageViewController
         
         // Safely unwrap user
-        if let user = viewModel.userItems?[indexPath.row] {
-            cv.setSingleUser(with: user)
-            navigationController?.show(cv, sender: nil)
-        } else {
-            // Handle the case when user is nil, perhaps log an error or display a message
-            print("Error: Selected user is nil.")
-        }
+        let user = viewModel.userItems?[indexPath.row]
+        cv.user = user
+        navigationController?.show(cv, sender: nil)
+      
     }
 
 }
